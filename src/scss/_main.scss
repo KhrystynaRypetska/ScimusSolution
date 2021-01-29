@@ -1,0 +1,382 @@
+// Write your styles here
+body, html {
+    position: relative;
+    box-sizing: border-box;
+    background: $backgroundColor;
+    width: 100%;
+    margin: 0;
+
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+main {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+header {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+footer {
+    padding: 15px;
+    span {
+        font-family:$Cantarell;
+        font-size: 15px;
+        color: $textDark;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 15px;
+}
+.header {
+    position: relative;
+
+    &_logo {
+        display: block;
+        max-width: 250px;
+        max-height: 150px;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_top-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &_nav {
+        display: flex;
+        ul {
+            padding: 0;
+        }
+        &_list {
+            display: flex;
+            width: 100%;
+            list-style-type: none;
+            &-item {
+                > a {
+                    font-family: $Roboto;
+                    color: $backgroundColor;
+                    text-transform: uppercase;
+                    position: relative;
+                    font-size: 24px;
+                    padding: 30px 150px;
+                    width: 100%;
+                    height: 100%;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        right: 0;
+                        top: 0;
+                        background-color: $navLink;
+                    }
+
+                }
+                &:last-child {
+                    a {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &_text {
+        font-family: $Roboto;
+        font-size: 24px;
+        color: $backgroundColor;
+        text-transform: uppercase;
+    }
+
+    > a {
+        font-family: $Ubuntu;
+        font-size: 15px;
+        color: $backgroundColor;
+        text-transform: uppercase;
+        padding: 15px 70px;
+        background-color: $textMain;
+    }
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0 25px;
+
+    &_input {
+        padding: 15px 20px;
+        border: 1px solid $textDark;
+
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-family: $Roboto;
+            font-size: 15px;
+            color: $textDark;
+        }
+    }
+}
+
+.post {
+    &-list {
+        &_title {
+            display: flex;
+            justify-content: flex-end;
+            text-transform: uppercase;
+            font-family: $Ubuntu ;
+            font-size: 24px;
+            color: $textDark;
+            margin-bottom: 35px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: $colorGray;
+        padding: 10px;
+        margin-bottom: 25px;
+
+        &_img {
+            display: block;
+            max-width: 300px;
+            max-height: 300px;
+            height: 100%;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &_content {
+            margin: 0 20px;
+        }
+
+        &-description {
+            position: relative;
+            font-family: $Ubuntu;
+            font-size: 15px;
+            color: $textRed;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: -10px;
+                border: 0;
+                background-color: $darkGray;
+            }
+        }
+
+        &-btn {
+            display: flex;
+            align-self: flex-end;
+            border: none;
+            background-color: $textMain;
+
+            font-family:$Ubuntu;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: $backgroundColor;
+
+            padding: 15px 70px;
+            margin-top: 35px;
+            margin-right: 20px;
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-title {
+            font-family: $Cantarell;
+            font-size: 20px;
+            color: $textMain;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        &-info {
+            font-family: $Cantarell;
+            font-size: 15px;
+            color: $textDark;
+            margin: 0;
+        }
+    }
+}
+
+.about {
+    &-wrapper {
+        padding-top: 20px;
+    }
+
+    &-img {
+        display: flex;
+        max-width: 1100px;
+        max-height: 300px;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &-text {
+        font-family: $Cantarell;
+        font-size: 15px;
+        color: $textDark;
+    }
+    &-title {
+        font-family: $Ubuntu ;
+        font-size: 24px;
+        color: $textDark;
+
+        text-align: end;
+        text-transform: uppercase;
+    }
+}
+
+.contact-form {
+    margin-bottom: 50px;
+    &_title {
+        font-family: $Ubuntu ;
+        font-size: 24px;
+        color: $textDark;
+        margin-bottom: 0;
+
+        &_wrapper {
+            text-align: end;
+        }
+    }
+
+    &_subtitle {
+        font-family: $Cantarell ;
+        font-size: 15px;
+        color: $textDark;
+        text-transform: uppercase;
+        margin-top: 0;
+        padding-top: 5px;
+    }
+
+    .form {
+        .input {
+            border: 1px solid $textMain;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+            &_textarea {
+                max-width: 100%;
+                min-height: 150px;
+                width: calc(100% - 2px);
+                height: 100%;
+                padding: 0;
+            }
+        }
+        &_fields {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .form_field {
+                width: calc(50% - 10px);
+
+                input {
+                    padding: 16px;
+                    width: calc(100% - 34px);
+                    height: 100%;
+                }
+            }
+
+        }
+        &_field {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+        &_textarea {
+            margin: 20px 0;
+        }
+        label {
+            font-family:$Cantarell;
+            font-size: 15px;
+            color: $textMain;
+            margin-bottom: 10px;
+        }
+        &_button {
+            display: block;
+
+            font-family:$Ubuntu;
+            font-size: 15px;
+            color: $backgroundColor;
+            padding: 15px 80px;
+            background-color: $textMain;
+
+            border: none;
+            margin-left: auto;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+
+    }
+}
+
+
+
+
+
